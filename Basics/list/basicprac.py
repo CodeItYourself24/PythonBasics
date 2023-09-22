@@ -30,10 +30,36 @@ string = input("Enter the elements: ")
 lst5 = string.split()       # import list as string
 print("list is:", lst5)
 
-#**********************************************
+#**************** append() **********************
+# adds one element at a time to the end of the list
+
 a = []
-print(a.append(1))  # appending elements to list
-print(a.append(3))
-print(a.append(5))
+a.append(1)  # appending elements to list
+a.append(3)
+a.append(5)
 print(a)
 
+# adding elements to the list
+# using iterator
+for i in range(91,94):
+    a.append(i)
+print("using an iterator:", a)
+
+# adding tuple to a list
+a.append(("its","tuple"))
+print("adding tuple to a list:", a)
+
+#**************** insert() **********************
+# inserts an element based on the index given
+
+inls = [11,22,33,44,55]
+inls.insert(0,"its")
+inls.insert(4,"insert")
+print("use of insert method:", inls)
+
+#**************** extend() **********************
+# used to add multiple elements at the same time at the end of the list.
+
+exls = ['pagani','suzuki']
+exls.extend(['mazarati','BMW'])
+print("using extend method:", exls)
