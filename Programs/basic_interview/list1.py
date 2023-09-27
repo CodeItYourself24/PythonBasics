@@ -68,3 +68,20 @@ upt = (10,20,30,40)
 upl = [*upt]
 print("using * unpacking:", upl)
 
+# <<<<<< remove last element from the list
+
+l = ["im", "new", "to", "coding"]
+l.pop()
+print("using pop():", l)
+
+l1 = [99,88,77,66]
+l1.remove(66)
+print("using remove:", l1)
+
+
+l2 = [13, 34, 36, 23, 15, 88]
+print("using negative slicing:", str(l2[:-1]))
+
+l3 = [1,2,3,4]
+del l3[-1]
+print("using delete: ", l3)
