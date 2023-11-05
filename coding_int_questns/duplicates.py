@@ -32,3 +32,15 @@ for i in ls2:
 
 print("list with no dup: ",uls)
 print("duplicates: ",dls)
+
+
+'''get the count of each duplicated element in a list'''
+
+ls3 = [1, 1, 5, 7, 8, 3, 2, 8, 2, 4, 4, 9, 8, 5, 4, 3]
+
+from collections import Counter
+count_dict = dict(Counter(ls3))
+print(f"count of each duplicated items using counter & dict: {count_dict}")
+
+
+''''''
