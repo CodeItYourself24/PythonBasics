@@ -41,6 +41,16 @@ t1.join()
 t2.join()
 print("Both threads are finished")
 
+#*********** GIL (Global Interpretor Lock) ***************************
+
+'''
+    It is a type of process lock whenever it deals with processes.
+
+        - The performance of the single-threaded process & the multi-threaded process will be the same in Python & this is because of GIL in Python.
+
+        - We can not achieve multithreading in Python because we have a GIL that restricts the threads & works as a single thread.
+'''
+
 
 # <<<<<<<< lambda function: >>>>>>>>>>>>>>>>>>>
 
