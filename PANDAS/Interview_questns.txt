@@ -1,0 +1,61 @@
+		                    
+                            <<< Pandas interview questions >>>
+
+Pandas >> 
+
+	- open source python package
+	- commonly used for data science, data analysis and machine learning
+	- provides various data structures and operations for manipulating numerical data and time series
+	- efficient in performing functions like 	- data visualization
+							- data manipulation
+							- data analysis
+
+Why use Pandas >>
+
+	- high performance data analysis tool
+	- working with large data sets
+	- supports/loads files with diff formats
+	- represented in tabular way (rows,cloumns)
+	- working on missing data
+	- we can use indexing-slicing-subsetting large amounts of data sets
+	- merge/join two diff data sets
+	- reshape the datasets
+
+Differnt types of data structures in pandas?
+
+	- Series
+	- DataFrame
+	- Panel
+
+Series >>
+
+	- data will be represented in one dimensional format
+	- can pass 'list' as a parameter
+
+DataFrame >>	(most efficient)
+
+	- data is rep in two dimentionsal format
+	- can pass list/dic/series/another df
+
+Panel >>
+
+	- data is rep in multi dimensional format
+	- can pass data like above and major axis(columns) and minor axis(rows)
+
+
+syntax:
+
+	Series >>
+
+		import pandas as pd
+		pd.Series(data,index)
+
+	DataFrame >>
+
+		import pandas as pd
+		pd.DataFrame(data)
+
+	Panel >>
+
+		import pandas as pd
+		pd.Panel(data,major axis,minor axis, dtype)
