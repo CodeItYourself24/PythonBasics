@@ -10,6 +10,13 @@ It is of 4 types:
     - method overriding
 
 '''
+# <<<<<<<<<<<<< duck typing: >>>>>>>>>>>>>>>>>>>>>>>>
+
+'''under progress'''
+
+# <<<<<<<<<<<<< operator Overloading: >>>>>>>>>>>>>>>>>>>>>>>>
+
+'''under progress'''
 
 # <<<<<<<<<<<<< Method Overloading: >>>>>>>>>>>>>>>>>>>>>>>>
 

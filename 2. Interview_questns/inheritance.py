@@ -17,6 +17,16 @@
 
 # Single Inheritance: a class that inherits only from one base class
 
+# basic syntax: 
+'''
+class A:
+    pass
+class B(A):
+    pass
+'''
+
+# EXAMPLE::
+
 class Animal:
     def speak(self):
         pass
@@ -54,41 +64,41 @@ print(my_car.drive())
 '''
 
 # example of MRO
-
+'''
 class A:
     pass
-
 class B(A):
     pass
-
 class C(A):
     pass
-
 class D(B, C):
     pass
 
 print(D.mro())  # You can access the MRO of a class by using the mro() method or the __mro__ attribute
+'''
 
 # Multi-level inheritance: a class inherits from other class which intern inherits from another class.
 
+# basic syntax:
 '''
-        class X:
-            pass
-        class Y(X):
-            pass
-        class Z(Y):
-            pass
+class X:
+    pass
+class Y(X):
+    pass
+class Z(Y):
+    pass
 '''
 
 # Hierarchical Inheritance:  multiple derived classes inherit from a single base class
 
+# basic syntax:
 '''
-    class A:
-        pass
-    class B(A):
-        pass
-    class C(A):
-        pass
-    class D(A):
-        pass
+class A:
+    pass
+class B(A):
+    pass
+class C(A):
+    pass
+class D(A):
+    pass
 '''
