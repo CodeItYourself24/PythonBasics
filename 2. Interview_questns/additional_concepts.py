@@ -41,6 +41,22 @@ t1.join()
 t2.join()
 print("Both threads are finished")
 
+'''
+gives o/p as: (o/p is random in order)
+
+first thread: 0
+second thread: a
+first thread: 1
+second thread: b
+second thread: c
+first thread: 2
+second thread: d
+first thread: 3
+second thread: e
+first thread: 4
+Both threads are finished
+'''
+
 #*********** GIL (Global Interpretor Lock) ***************************
 
 '''
@@ -66,6 +82,8 @@ print("Both threads are finished")
 add_num = lambda x,y : x + y
 res = add_num(9,11)
 print(f"sum of two numbers using lambda: {res}")
+
+# gives o/p as >>       sum of two numbers using lambda: 20
 
 # 2. list comprehension:
 
@@ -100,6 +118,16 @@ for num in gen:     # iterating through the generator
     print(num)
 
 '''
+gives o/p as:
+
+0
+1
+2
+3
+4
+'''
+
+'''
     Adavantages:: 
         - Generators are Memory Efficient because they don't store the entire sequence in memory; they produce values on-the-fly as needed.
         - Lazy Evaluation: Generators use lazy evaluation, meaning they generate values one at a time when requested.
@@ -107,6 +135,13 @@ for num in gen:     # iterating through the generator
 '''
 
 # Decorators:
+
+'''they are used to enhance the behaviour of the functions/methods without changing their code.
+
+- decorators are often used for logging, authentication, access control and more
+
+- Another def >> they are essentially funtions that add functionality to an existing function in python
+without changing the structure of the function itself.'''
 
 '''syntax:          def decorator_func():
                         wrapper_func()
@@ -116,10 +151,3 @@ for num in gen:     # iterating through the generator
                     @decorator_func
                         def my_func()
                             func code here'''
-
-'''they are used to enhance the behaviour of the functions/methods without changing their code
-
-- they are essentially funtions that add functionality to an existing function in python
-without changing the structure of the function itself
-
-- decorators are often used for logging, authentication, access control and more'''

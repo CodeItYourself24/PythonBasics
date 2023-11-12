@@ -2,11 +2,11 @@
 # <<<<<<<<<< Function annotations: >>>>>>>>>>>>>>>>>>>>
 
 '''
-    Function annotations (->) in Python are a way to provide additional information about the types of function parameters and the return value.
+    Function annotations (->) provide additional information about the expected types of function parameters and the return value.
 
-    - they are not enforced by the Python interpreter and do not have any impact on the actual execution of the code.
-    - serve as a form of documentation, allowing developers to specify the expected types/meanings of function arguments & return values.
-
+    - they are not enforced by the Python interpreter
+    - do not have any impact on the actual execution of the code.
+    - serve as a form of documentation
 
     ex: def add(a: int, b: int) -> int:
             return a + b
@@ -17,13 +17,13 @@
 '''
         The Pickle module accepts any Python object and converts it into a string representation and dumps it into a file by using the dump function, this process is called pickling. 
         
-        While the process of retrieving original Python objects from the stored string representation is called unpickling.
+        While the process of (reverse of this method) which is retrieving original Python objects from the stored string representation is called unpickling.
 '''
 
 # <<<<<<<<<<<< PIP (python installer package) >>>>>>>>>>>>>
 
 '''
-        PIP is an acronym for Python Installer Package which provides an interface to install various Python modules. 
+        PIP (Python Installer Package) which provides an interface to install various Python modules. 
 
         It is a command-line tool that can search for packages over the internet and install them without any user interaction.
 '''
