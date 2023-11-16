@@ -8,7 +8,7 @@
 
 '''
     - mainly focusses on what the object does instead of how it does
-    - Abstraction can achieved by using abstract classes and abstract classes.
+    - Abstraction can achieved by using abstract methods and abstract classes.
 '''
 
 #           <<<<<<<< Abstract Method >>>>>>>>>
