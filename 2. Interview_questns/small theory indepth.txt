@@ -1,0 +1,51 @@
+
+-> self in python?
+    - self represents the instance of the class.
+    - with this you can access the attributes and methods of a class
+    - it binds the attributes with the given arguments
+
+-> __init__ in python?
+    - it is a constructor method in python
+    - used for initializing new instances of a class
+    - it is automatically called to allocate memory when a new object/claass is created
+
+    example:
+
+        class Person:
+        def __init__(self, name, age):
+            self.name = name
+            self.age = age
+
+        def display_info(self):
+            print(f"Name: {self.name}, Age: {self.age}")
+
+        # Creating an instance of the Person class
+        person1 = Person("Alice", 30)       # __init__ method initializes the name and age attributes for the instance.
+        person1.display_info()  # Output: Name: Alice, Age: 30
+
+-> diff btw modules and packages
+
+    Modules >> they are generally python files that can have set of functions,classes.
+            - they can be imported and initialized using import statement
+
+    Package >> A package is a collection of multiple modules organized in a directory. 
+            - A package contains an __init__.py file (which may be empty) to indicate that the directory should be treated as a package.
+
+    example: 
+            my_package/
+            ├── __init__.py
+            ├── module1.py
+            └── module2.py
+
+    Key differences:
+    Structure: A module is a single file, while a package is a directory that contains multiple modules and possibly sub-packages.
+
+    Purpose: Modules group related code within a single file, whereas packages help organize and manage multiple modules in a directory structure.
+
+    Access: Modules are imported directly using their names, while packages are imported along with their module hierarchy using dot notation (package_name.module_name).
+
+    File Structure: Modules are standalone files with a .py extension, whereas packages are directories containing an __init__.py file to denote them as Python packages.
+
+
+
+

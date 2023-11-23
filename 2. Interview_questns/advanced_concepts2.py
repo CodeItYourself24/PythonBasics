@@ -48,3 +48,22 @@ result = list(combined) # # Converting the zip iterator to a list of tuples
 print(result)
 
 # which gives the output as:	[('apple', 'red'), ('banana', 'yellow'), ('cherry', 'red')]
+
+
+# <<<<<<<<<<<<< DOC strings >>>>>>>>>>>>>>>>
+
+'''
+DOC strings >> are used to document the code. 
+
+        - they are strings used right after the def of a fucntion/method, class or a module.
+        - it helps the developers/other to understand the purpose of func, classes,methods and modules
+'''
+
+def greet(name):
+    """this function greets the user with the given name"""
+    print(f"Hello! {name}")
+
+print(greet.__doc__)    # acessing the docstring using the doc attribute
+print(greet('Sandeep'))
+
+
