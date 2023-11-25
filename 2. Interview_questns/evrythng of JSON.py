@@ -21,3 +21,37 @@ print(parsed_data['name'])      # accessing value of a single variable from pars
 
     - dumps() method is used to serialize data from a Python object into a JSON formatted string that is returned as a Python string.
 '''
+
+# how to check whether following json is valid or invalid. 
+'''
+Python provides The json.tool module to validate JSON objects from the command line. Run the following command.
+
+Command: echo "JSON DATA" | python -m json.tool'''
+
+# OR
+
+import json
+
+def validateJSON(jsonDATA):
+    try:
+        json.loads(jsonDATA)
+    except ValueError as err:
+        return False
+    return True
+
+Invalid_json_data = """{ 
+   "company":{ 
+      "employee":{ 
+         "name":"emma",
+         "payble":{ 
+            "salary":7000
+            "bonus":800
+         }
+      }
+   }
+}"""
+
+isvalid = validateJSON(Invalid_json_data)
+print("given json data is:", isvalid)
+
+
