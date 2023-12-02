@@ -3,37 +3,39 @@
 nested_list= [[2, 4, 6, 8], [10, 12, 14], [16, 18, 20]]
 
 # using list comprehension
-inls = [element for inner_list in nested_list for element in inner_list]
-print("making the inner list to a flat list",inls)
+flat_list = [element for inner_list in nested_list for element in inner_list]
+print(f"nested to flat using list comprehension: {flat_list}")
 
-# using chain from iter tools
+# using chain in iter_tools
 from itertools import chain
-flat_list = list(chain.from_iterable(nested_list))
-print("using chain from iter_tools: ",flat_list)     
+flt_list = list(chain.from_iterable(nested_list))
+print(f"nested to flat using chain from iter_tools: {flt_list}")
 
-
+print("*****************************************")
 # double nested list
 nstd_list = [[2, 4, 6, 8], [10, 12, 14, [16, 18, 20]]]
 
-def flatten(lst):
-    for item in lst:
-        if isinstance(item, list):
-            yield from flatten(item)
+def flatten(l):
+    for i in l:
+        if isinstance(i,list):
+            yield from flatten(i)
         else:
-            yield item
+            yield i
 
-flat_list = list(flatten(nstd_list))
-print(flat_list)
+flatten_list = list(flatten(nstd_list))
+print(f"nested to flat using func, isinstance: {flatten_list}")
 
+print("*****************************************")
 # triple nested list
-ns_list = [[2, 4, 6, 8,[10, 12, 14, [16, 18, 20]]]]
-def flt(lst):
-    for item in lst:
-        if isinstance(item,list):
-            if isinstance(item,list):
-                yield from flt(item)
-        else:
-            yield item
+tnls = [[2, 4, 6, 8,[10, 12, 14, [16, 18, 20]]]]
 
-fls = list(flt(ns_list))
-print("triple nested list:",fls)
+def triple_flat(l):
+    for i in l:
+        if isinstance(i,list):
+            if isinstance(i,list):
+                yield from triple_flat(i)
+        else:
+            yield i
+
+fls = list(triple_flat(tnls))
+print(f"triple nested to flat using isinstance: {fls}")
