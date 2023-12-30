@@ -12,11 +12,82 @@ It is of 4 types:
 '''
 # <<<<<<<<<<<<< duck typing: >>>>>>>>>>>>>>>>>>>>>>>>
 
-'''under progress'''
+'''It is a concept where class of an object is less important than the methods'''
+# class type is not checked if minimum methods are present
+
+class Duck():
+    def talk(self):
+        print("the duck quacks")
+    def walk(self):
+        print("the duck walks")
+
+class Chicken():
+    def talk(self):
+        print("the chicken clucks")
+    def walk(self):
+        print("the chicken walks")
+
+class Person():
+    def catch(self, duck):
+        duck.walk
+        duck.talk
+        
+duck = Duck()
+chicken = Chicken()
+person = Person()
+person.catch(duck)      #-----> this prints the statements that the duck methods consists
+person.catch(chicken)   #----> this is also prints the statements of chicken methods which are same like the duck irrespective of the class name
+
 
 # <<<<<<<<<<<<< operator Overloading: >>>>>>>>>>>>>>>>>>>>>>>>
 
-'''under progress'''
+'''
+Example:
+            5 + 6 
+    here 5, 6 are operands and "+" is called operator
+'''
+# simple add method
+a = 5
+b = 6
+res = a+b
+print(res)  # gives you 11
+
+'''
+where as in behind the scene they actually call methods like "__add__,"__sub__",
+which are called Magic methods or Dunder methods (methods that starts with double underscore)
+'''
+
+#example:
+
+class Student:
+    def __init__(self,m1,m2):
+        self.m1 = m1
+        self.m2 = m2
+    
+    # defining your own method
+    def __add__(self,other):
+        m1 = self.m1 + other.m1
+        m2 = self.m2 + other.m2
+        s3 = Student(m1,m2)
+        return s3
+
+s1 = Student(80,70)
+s2 = Student(75,90)
+s3= s1+s2
+print(s3.m1)        #----> gives you 155
+
+
+# the use of Operator Overloading:
+'''
+    It is a feature that allows you to redefine the behaviour of mathematical and comparision operators for custom datatypes.
+    Which means using standard mathematical operators and comparision operators in your own classes
+
+        " Operator overloading is about the use of familiar operators with user-defined objects. "
+
+    Features:
+        - it enables writing expressive, readable code that works seamlessly with custom data types by overloading native operators and behaviors.
+        - The polymorphism makes the custom types interchangeable with native types in many situations.
+'''
 
 # <<<<<<<<<<<<< Method Overloading: >>>>>>>>>>>>>>>>>>>>>>>>
 
